@@ -78,8 +78,10 @@ app.delete("/users/:uuid", async (req, res) => {
 
     return res.json({ message: "User deleted!" });
   } catch (err) {
+
     console.log(err);
     return res.status(500).json({ error: "Something went wrong" });
+    
   }
 });
 
