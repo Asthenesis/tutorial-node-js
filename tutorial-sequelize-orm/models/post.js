@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(User, { foreignKey: "userId", as: "user" });
     }
 
-    //to hide id 
+    //to hide id  
     toJSON() {
       return { ...this.get(), id: undefined, userId: undefined };
     }
